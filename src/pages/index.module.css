@@ -1,3 +1,40 @@
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 40px;
+  text-align: center;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.dancer {
+  z-index: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.dancer:nth-child(1) {
+  top: 54%;
+  left: -10%;
+}
+
+.dancer:nth-child(2) {
+  top: 30%;
+  left: 80%;
+}
+.dancer:nth-child(3) {
+  top: 100;
+  left: 100;
+}
+
+.raised {
+  z-index: 3;
+}
+
 .header:after {
   content: "";
   display: block;
