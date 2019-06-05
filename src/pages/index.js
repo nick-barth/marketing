@@ -54,28 +54,33 @@ const IndexPage = props => {
       </div>
       <div className={styles.emailContainer}>
         <div className={styles.emailHeader}>
-          We're still in Beta, however, we'd love to see your team
+          We're still in Beta, however, we'd love to see your team.
         </div>
         <div className={styles.emailSubtext}>
           Enter your email here and we'll give you a free website (for a little
-          while)
+          while).
         </div>
-        <div className={styles.emailInputContainer}>
-          <input
-            className={styles.emailInput}
-            id="email"
-            type="text"
-            placeholder="Email"
-            onChange={val => handleChange(val.target.value)}
-          />
+        <div className={styles.emailForm}>
+          <div className={styles.emailInputContainer}>
+            <input
+              className={styles.emailInput}
+              id="email"
+              type="text"
+              placeholder="Email"
+              onChange={val => handleChange(val.target.value)}
+            />
+          </div>
+          <button
+            disabled={!canSend}
+            className={classnames(
+              styles.button,
+              canSend && styles.buttonCanSend
+            )}
+            type="submit"
+          >
+            Submit
+          </button>
         </div>
-        <button
-          disabled={!canSend}
-          className={classnames(styles.button, canSend && styles.buttonCanSend)}
-          type="submit"
-        >
-          Submit
-        </button>
       </div>
     </Layout>
   )
