@@ -24,7 +24,7 @@ const IndexPage = props => {
           <Img
             style={{ position: "absolute" }}
             className={styles.dancer}
-            fluid={props.data.ball_1.childImageSharp.fixed}
+            fixed={props.data.ball_1.childImageSharp.fixed}
             alt="Balls"
           />
           <Img
@@ -45,7 +45,7 @@ const IndexPage = props => {
         </div>
         <div className={styles.heroContainer}>
           <div className={classnames(styles.hero, styles.raised)}>
-            Generate a website for your esports team in seconds
+            Generate a website for your esports team in&nbsp;seconds
           </div>
           <div className={classnames(styles.subhero, styles.raised)}>
             perfect for the start of your esports journey
