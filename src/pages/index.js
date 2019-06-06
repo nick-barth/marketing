@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import Scroll from "react-scroll"
 import classnames from "classnames"
 
 import Layout from "../components/layout"
@@ -6,6 +7,9 @@ import SEO from "../components/seo"
 import styles from "./index.module.scss"
 import Img from "gatsby-image"
 import Chevron from "../icons/chevron.svg"
+import Efficient from "../icons/efficient.svg"
+import Performant from "../icons/performant.svg"
+import Simple from "../icons/simple.svg"
 
 const IndexPage = props => {
   const [emailAddress, setEmailAddress] = useState("")
@@ -17,7 +21,9 @@ const IndexPage = props => {
     setEmailAddress(value)
   }
 
-  console.log(props.data)
+  if (typeof window !== undefined) {
+    require("react-scroll")
+  }
 
   return (
     <Layout>
@@ -57,7 +63,7 @@ const IndexPage = props => {
       </div>
       <div className={styles.emailContainer}>
         <div className={styles.emailHeader}>
-          We're still in Beta, however, we'd love to see your team.
+          We're still in Beta, but, we'd love to see your team.
         </div>
         <div className={styles.emailSubtext}>
           Enter your email here and we'll give you a free website (for a little
@@ -134,6 +140,60 @@ const IndexPage = props => {
             Learn More <Chevron className={styles.icon} />
           </button>
         </div>
+      </div>
+      <div className={styles.section}>
+        <div className={styles.sectionImageContainer}>
+          <Simple className={styles.sectionImage} />
+        </div>
+        <div className={styles.sectionContent}>
+          <div className={styles.sectionHeader}>Streamlined</div>
+          <div className={styles.sectionContent}>
+            Web data suggests users are looking for a functional, fast, and
+            streamlined experience on any website. We are using data and testing
+            to ensure we know what the user is looking for, and we are able to
+            serve them as quickly as possible.
+          </div>
+        </div>
+      </div>
+      <div className={classnames(styles.section, styles.sectionLeft)}>
+        <div className={styles.sectionImageContainer}>
+          <Performant className={styles.sectionImage} />
+        </div>
+        <div className={styles.sectionContent}>
+          <div className={styles.sectionHeader}>Performance</div>
+          <div className={styles.sectionContent}>
+            Execution is key. We strive to use the best technology and enforce
+            strict standards on ourselves. So far, it's working. The numbers are
+            clear in this, pageload is the single most important metric for
+            users interactions with your site. We aim to be as quick as
+            possible, to serve you and your users.
+          </div>
+        </div>
+      </div>
+      <div className={styles.section}>
+        <div className={styles.sectionImageContainer}>
+          <Efficient className={styles.sectionImage} />
+        </div>
+        <div className={styles.sectionContent}>
+          <div className={styles.sectionHeader}>Data driven</div>
+          <div className={styles.sectionContent}>
+            We're making decisions for you, those decisions come from our
+            designers, and most importantly our data. We're measuring everything
+            about these websites in order to whittle our way down and hone a
+            perfect site.
+          </div>
+        </div>
+      </div>
+      <div className={styles.cta}>
+        <div className={styles.ctaContent}>
+          Want to see your new site in action?
+        </div>
+        <button
+          onClick={() => Scroll.animateScroll.scrollToTop()}
+          className={styles.ctaCta}
+        >
+          Start now
+        </button>
       </div>
     </Layout>
   )
