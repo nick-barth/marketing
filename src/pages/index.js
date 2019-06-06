@@ -15,6 +15,12 @@ const IndexPage = props => {
   const [emailAddress, setEmailAddress] = useState("")
   const [canSend, setCanSend] = useState(false)
 
+  let textInput = null
+
+  function handleClick() {
+    textInput.focus()
+  }
+
   const handleChange = value => {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
     setCanSend(re.test(String(value).toLowerCase()) ? true : false)
@@ -77,6 +83,9 @@ const IndexPage = props => {
               type="text"
               placeholder="Email"
               onChange={val => handleChange(val.target.value)}
+              ref={input => {
+                textInput = input
+              }}
             />
           </div>
           <button
@@ -189,7 +198,10 @@ const IndexPage = props => {
           Want to see your new site in action?
         </div>
         <button
-          onClick={() => Scroll.animateScroll.scrollToTop()}
+          onClick={() => {
+            Scroll.animateScroll.scrollToTop(250)
+            setTimeout(() => textInput.focus(), 1000)
+          }}
           className={styles.ctaCta}
         >
           Start now
