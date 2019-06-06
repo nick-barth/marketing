@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import styles from "./index.module.scss"
 import Img from "gatsby-image"
+import Chevron from "../icons/chevron.svg"
 
 const IndexPage = props => {
   const [emailAddress, setEmailAddress] = useState("")
@@ -15,6 +16,8 @@ const IndexPage = props => {
     setCanSend(re.test(String(value).toLowerCase()) ? true : false)
     setEmailAddress(value)
   }
+
+  console.log(props.data)
 
   return (
     <Layout>
@@ -82,6 +85,56 @@ const IndexPage = props => {
           </button>
         </div>
       </div>
+      <div className={styles.triContainer}>
+        <div className={styles.triBox}>
+          <Img
+            style={{ position: "absolute" }}
+            className={styles.triBoxIcon}
+            fixed={props.data.ball_4.childImageSharp.fixed}
+            alt="Balls"
+          />
+          <div className={styles.triBoxHeader}>Data driven efficiency</div>
+          <div className={styles.triBoxContent}>
+            With our network of generated sites, we are able to run big data
+            user testing to determine the best solution for your site.
+          </div>
+          <button className={styles.triBoxButton}>
+            Learn More <Chevron className={styles.icon} />
+          </button>
+        </div>
+        <div className={styles.triBox}>
+          <Img
+            style={{ position: "absolute" }}
+            className={classnames(styles.triBoxIcon, styles.triBoxIcon2)}
+            fixed={props.data.ball_4.childImageSharp.fixed}
+            alt="Balls"
+          />
+          <div className={styles.triBoxHeader}>Simple</div>
+          <div className={styles.triBoxContent}>
+            We are offering you a solution, no guesswork, no DIY, we are
+            crafting an out of box experience that suits exactly your needs
+          </div>
+          <button className={styles.triBoxButton}>
+            Learn More <Chevron className={styles.icon} />
+          </button>
+        </div>
+        <div className={styles.triBox}>
+          <Img
+            style={{ position: "absolute" }}
+            className={classnames(styles.triBoxIcon, styles.triBoxIcon3)}
+            fixed={props.data.ball_4.childImageSharp.fixed}
+            alt="Balls"
+          />
+          <div className={styles.triBoxHeader}>Hi-Tech</div>
+          <div className={styles.triBoxContent}>
+            By limiting featuresets we are able to concisely control user
+            experience, SEO, and the preformance of your website.
+          </div>
+          <button className={styles.triBoxButton}>
+            Learn More <Chevron className={styles.icon} />
+          </button>
+        </div>
+      </div>
     </Layout>
   )
 }
@@ -91,6 +144,14 @@ export const query = graphql`
     ball_1: file(relativePath: { eq: "ball_1.png" }) {
       childImageSharp {
         fixed(width: 150, height: 150) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+
+    ball_4: file(relativePath: { eq: "ball_1.png" }) {
+      childImageSharp {
+        fixed(width: 50, height: 50) {
           ...GatsbyImageSharpFixed
         }
       }

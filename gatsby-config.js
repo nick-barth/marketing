@@ -20,6 +20,14 @@ module.exports = {
         trackingId: "UA-XXXXXXXXX-X",
       },
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /icons/, // See below to configure properly
+        },
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
   ],
