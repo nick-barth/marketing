@@ -248,10 +248,15 @@ html {
   border-radius: 8px;
   width: 85%;
   margin: auto;
+  cursor: pointer;
   margin-bottom: 4rem;
   padding: 2rem;
   color: white;
   position: relative;
+  transition: all 0.35s ease-in-out;
+  &:hover {
+    box-shadow: 13px 6px 24px 0 rgba(0, 0, 0, 0.43);
+  }
   @include desktop {
     margin: 0 20px;
     display: flex;
@@ -297,10 +302,16 @@ html {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  padding: 1.2rem;
+  padding: 1rem;
   font-size: 1rem;
   transition: all 0.35s ease-in-out;
   margin-left: auto;
+  margin-top: auto;
+  cursor: pointer;
+}
+
+.triBoxButton:hover {
+  background-color: rgb(118, 86, 206);
 }
 
 .icon {

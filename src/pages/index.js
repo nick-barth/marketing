@@ -93,7 +93,7 @@ const IndexPage = props => {
             fixed={props.data.ball_4.childImageSharp.fixed}
             alt="Balls"
           />
-          <div className={styles.triBoxHeader}>Data driven efficiency</div>
+          <div className={styles.triBoxHeader}>Efficient</div>
           <div className={styles.triBoxContent}>
             With our network of generated sites, we are able to run big data
             user testing to determine the best solution for your site.
@@ -125,7 +125,7 @@ const IndexPage = props => {
             fixed={props.data.ball_4.childImageSharp.fixed}
             alt="Balls"
           />
-          <div className={styles.triBoxHeader}>Hi-Tech</div>
+          <div className={styles.triBoxHeader}>Performant</div>
           <div className={styles.triBoxContent}>
             By limiting featuresets we are able to concisely control user
             experience, SEO, and the preformance of your website.
