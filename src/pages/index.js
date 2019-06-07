@@ -10,6 +10,7 @@ import Chevron from "../icons/chevron.svg"
 import Efficient from "../icons/efficient.svg"
 import Performant from "../icons/performant.svg"
 import Simple from "../icons/simple.svg"
+import "./reset.scss"
 
 const IndexPage = props => {
   const [emailAddress, setEmailAddress] = useState("")
@@ -67,40 +68,39 @@ const IndexPage = props => {
           <h1 className={classnames(styles.hero, styles.raised)}>
             Generate a website for your esports team in&nbsp;seconds
           </h1>
-          <div className={classnames(styles.subhero, styles.raised)}>
+          <h2 className={classnames(styles.subhero, styles.raised)}>
             perfect for the start of your esports journey
-          </div>
+          </h2>
         </div>
       </div>
       <div className={styles.emailContainer}>
         <h2 className={styles.emailHeader}>
           We're still in Beta, we'd love to see your team.
         </h2>
-        <div className={styles.emailSubtext}>
+        <p className={styles.emailSubtext}>
           Enter your email here and we'll give you a free website (for a little
           while).
-        </div>
+        </p>
         <div className={styles.emailForm}>
           <form
             method="post"
             action="#"
-            data-netlify="true"
+            netlify
             name="contact"
             className={styles.emailInputContainer}
           >
-            <label className={styles.formLabel} for="email">
-              Email
+            <label htmlFor="email">
+              <input
+                className={styles.emailInput}
+                id="email"
+                type="text"
+                placeholder="Email"
+                onChange={val => handleChange(val.target.value)}
+                ref={input => {
+                  textInput = input
+                }}
+              />
             </label>
-            <input
-              className={styles.emailInput}
-              id="email"
-              type="text"
-              placeholder="Email"
-              onChange={val => handleChange(val.target.value)}
-              ref={input => {
-                textInput = input
-              }}
-            />
           </form>
           <button
             disabled={!canSend}
@@ -171,12 +171,12 @@ const IndexPage = props => {
         </div>
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionHeader}>Streamlined</h2>
-          <div className={styles.sectionContent}>
+          <p className={styles.sectionContent}>
             Web data suggests users are looking for a functional, fast, and
             streamlined experience on any website. We are using data and testing
             to ensure we know what the user is looking for, and we are able to
             serve them as quickly as possible.
-          </div>
+          </p>
         </div>
       </div>
       <div className={classnames(styles.section, styles.sectionLeft)}>
@@ -185,13 +185,13 @@ const IndexPage = props => {
         </div>
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionHeader}>Performance</h2>
-          <div className={styles.sectionContent}>
+          <p className={styles.sectionContent}>
             Execution is key. We strive to use the best technology and enforce
             strict standards on ourselves. So far, it's working. The numbers are
             clear in this, pageload is the single most important metric for
             users interactions with your site. We aim to be as quick as
             possible, to serve you and your users.
-          </div>
+          </p>
         </div>
       </div>
       <div className={styles.section}>
@@ -200,12 +200,12 @@ const IndexPage = props => {
         </div>
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionHeader}>Data driven</h2>
-          <div className={styles.sectionContent}>
+          <p className={styles.sectionContent}>
             We're making decisions for you, those decisions come from our
             designers, and most importantly our data. We're measuring everything
             about these websites in order to whittle our way down and hone a
             perfect site.
-          </div>
+          </p>
         </div>
       </div>
       <div className={styles.cta}>
