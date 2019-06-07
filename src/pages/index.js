@@ -93,12 +93,15 @@ const IndexPage = props => {
           data-netlify-honeypot="bot-field"
           name="contact"
         >
-          <label htmlFor="bot-field">
-            <input type="hidden" name="bot-field" />
+          <label className={styles.hidden} htmlFor="bot-field">
+            Hidden Botfield
           </label>
-          <label htmlFor="form-name">
-            <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+          <label className={styles.hidden} htmlFor="form-name">
+            {" "}
+            hidden formname{" "}
           </label>
+          <input type="hidden" name="form-name" value="contact" />
           <label className={styles.emailInputContainer} htmlFor="email">
             <input
               className={styles.emailInput}
