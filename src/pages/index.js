@@ -89,9 +89,12 @@ const IndexPage = props => {
           method="post"
           action="#"
           className={styles.emailForm}
-          netlify
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
           name="contact"
         >
+          <input type="hidden" name="bot-field" />
+          <input type="hidden" name="form-name" value="contact" />
           <label className={styles.emailInputContainer} htmlFor="email">
             <input
               className={styles.emailInput}
