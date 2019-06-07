@@ -31,6 +31,11 @@ const IndexPage = props => {
     require("react-scroll")
   }
 
+  const scrollToTop = () => {
+    Scroll.animateScroll.scrollToTop(250)
+    setTimeout(() => textInput.focus(), 1000)
+  }
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -59,24 +64,33 @@ const IndexPage = props => {
           <div className={styles.logoText}>nextgenerate</div>
         </div>
         <div className={styles.heroContainer}>
-          <div className={classnames(styles.hero, styles.raised)}>
+          <h1 className={classnames(styles.hero, styles.raised)}>
             Generate a website for your esports team in&nbsp;seconds
-          </div>
+          </h1>
           <div className={classnames(styles.subhero, styles.raised)}>
             perfect for the start of your esports journey
           </div>
         </div>
       </div>
       <div className={styles.emailContainer}>
-        <div className={styles.emailHeader}>
-          We're still in Beta, but, we'd love to see your team.
-        </div>
+        <h2 className={styles.emailHeader}>
+          We're still in Beta, we'd love to see your team.
+        </h2>
         <div className={styles.emailSubtext}>
           Enter your email here and we'll give you a free website (for a little
           while).
         </div>
         <div className={styles.emailForm}>
-          <div className={styles.emailInputContainer}>
+          <form
+            method="post"
+            action="#"
+            data-netlify="true"
+            name="contact"
+            className={styles.emailInputContainer}
+          >
+            <label className={styles.formLabel} for="email">
+              Email
+            </label>
             <input
               className={styles.emailInput}
               id="email"
@@ -87,7 +101,7 @@ const IndexPage = props => {
                 textInput = input
               }}
             />
-          </div>
+          </form>
           <button
             disabled={!canSend}
             className={classnames(
@@ -108,12 +122,12 @@ const IndexPage = props => {
             fixed={props.data.ball_4.childImageSharp.fixed}
             alt="Balls"
           />
-          <div className={styles.triBoxHeader}>Efficient</div>
-          <div className={styles.triBoxContent}>
+          <h3 className={styles.triBoxHeader}>Efficient</h3>
+          <p className={styles.triBoxContent}>
             With our network of generated sites, we are able to run big data
             user testing to determine the best solution for your site.
-          </div>
-          <button className={styles.triBoxButton}>
+          </p>
+          <button onClick={scrollToTop} className={styles.triBoxButton}>
             Learn More <Chevron className={styles.icon} />
           </button>
         </div>
@@ -124,12 +138,12 @@ const IndexPage = props => {
             fixed={props.data.ball_4.childImageSharp.fixed}
             alt="Balls"
           />
-          <div className={styles.triBoxHeader}>Simple</div>
-          <div className={styles.triBoxContent}>
+          <h3 className={styles.triBoxHeader}>Simple</h3>
+          <p className={styles.triBoxContent}>
             We are offering you a solution, no guesswork, no DIY, we are
             crafting an out of box experience that suits exactly your needs
-          </div>
-          <button className={styles.triBoxButton}>
+          </p>
+          <button onClick={scrollToTop} className={styles.triBoxButton}>
             Learn More <Chevron className={styles.icon} />
           </button>
         </div>
@@ -140,12 +154,13 @@ const IndexPage = props => {
             fixed={props.data.ball_4.childImageSharp.fixed}
             alt="Balls"
           />
-          <div className={styles.triBoxHeader}>Performant</div>
-          <div className={styles.triBoxContent}>
-            By limiting featuresets we are able to concisely control user
-            experience, SEO, and the preformance of your website.
-          </div>
-          <button className={styles.triBoxButton}>
+          <h3 className={styles.triBoxHeader}>Performant</h3>
+          <p className={styles.triBoxContent}>
+            By using the latest tech and limiting featuresets we are able to
+            concisely control user experience, SEO, and the preformance of your
+            website.
+          </p>
+          <button onClick={scrollToTop} className={styles.triBoxButton}>
             Learn More <Chevron className={styles.icon} />
           </button>
         </div>
@@ -155,7 +170,7 @@ const IndexPage = props => {
           <Simple className={styles.sectionImage} />
         </div>
         <div className={styles.sectionContent}>
-          <div className={styles.sectionHeader}>Streamlined</div>
+          <h2 className={styles.sectionHeader}>Streamlined</h2>
           <div className={styles.sectionContent}>
             Web data suggests users are looking for a functional, fast, and
             streamlined experience on any website. We are using data and testing
@@ -169,7 +184,7 @@ const IndexPage = props => {
           <Performant className={styles.sectionImage} />
         </div>
         <div className={styles.sectionContent}>
-          <div className={styles.sectionHeader}>Performance</div>
+          <h2 className={styles.sectionHeader}>Performance</h2>
           <div className={styles.sectionContent}>
             Execution is key. We strive to use the best technology and enforce
             strict standards on ourselves. So far, it's working. The numbers are
@@ -184,7 +199,7 @@ const IndexPage = props => {
           <Efficient className={styles.sectionImage} />
         </div>
         <div className={styles.sectionContent}>
-          <div className={styles.sectionHeader}>Data driven</div>
+          <h2 className={styles.sectionHeader}>Data driven</h2>
           <div className={styles.sectionContent}>
             We're making decisions for you, those decisions come from our
             designers, and most importantly our data. We're measuring everything
@@ -197,13 +212,7 @@ const IndexPage = props => {
         <div className={styles.ctaContent}>
           Want to see your new site in action?
         </div>
-        <button
-          onClick={() => {
-            Scroll.animateScroll.scrollToTop(250)
-            setTimeout(() => textInput.focus(), 1000)
-          }}
-          className={styles.ctaCta}
-        >
+        <button onClick={scrollToTop} className={styles.ctaCta}>
           Start now
         </button>
       </div>

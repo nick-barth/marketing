@@ -157,6 +157,10 @@ html {
   }
 }
 
+.formLabel {
+  display: none;
+}
+
 .emailInput {
   padding: 0.8rem;
   text-align: center;
@@ -359,7 +363,7 @@ html {
 }
 
 .cta {
-  padding: 8rem;
+  padding: 2rem;
   width: 100%;
   background-color: rgb(118, 86, 206);
   color: white;
@@ -367,19 +371,22 @@ html {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  @include tablet {
+    padding: 8rem;
+  }
 }
 
 .ctaCta {
   border: none;
   color: rgb(118, 86, 206);
+  background-color: white;
   border: 1px solid white;
   border-radius: 8px;
   padding: 0.8rem;
   font-size: 1rem;
   min-width: 120px;
   transition: all 0.35s ease-in-out;
-  display: flex;
-  align-items: center;
   cursor: pointer;
   font-weight: 700;
 }
