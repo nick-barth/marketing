@@ -99,6 +99,7 @@ const IndexPage = props => {
             <input
               className={styles.emailInput}
               id="email"
+              name="name"
               type="text"
               placeholder="Email"
               onChange={val => handleChange(val.target.value)}
