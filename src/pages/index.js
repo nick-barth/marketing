@@ -37,6 +37,10 @@ const IndexPage = props => {
     setTimeout(() => textInput.focus(), 1000)
   }
 
+  const handleSubmit = () => {
+    console.log("wow")
+  }
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -81,27 +85,25 @@ const IndexPage = props => {
           Enter your email here and we'll give you a free website (for a little
           while).
         </p>
-        <div className={styles.emailForm}>
-          <form
-            method="post"
-            action="#"
-            netlify
-            name="contact"
-            className={styles.emailInputContainer}
-          >
-            <label htmlFor="email">
-              <input
-                className={styles.emailInput}
-                id="email"
-                type="text"
-                placeholder="Email"
-                onChange={val => handleChange(val.target.value)}
-                ref={input => {
-                  textInput = input
-                }}
-              />
-            </label>
-          </form>
+        <form
+          method="post"
+          action="#"
+          className={styles.emailForm}
+          netlify
+          name="contact"
+        >
+          <label className={styles.emailInputContainer} htmlFor="email">
+            <input
+              className={styles.emailInput}
+              id="email"
+              type="text"
+              placeholder="Email"
+              onChange={val => handleChange(val.target.value)}
+              ref={input => {
+                textInput = input
+              }}
+            />
+          </label>
           <button
             disabled={!canSend}
             className={classnames(
@@ -109,10 +111,11 @@ const IndexPage = props => {
               canSend && styles.buttonCanSend
             )}
             type="submit"
+            onClick={handleSubmit}
           >
             Submit
           </button>
-        </div>
+        </form>
       </div>
       <div className={styles.triContainer}>
         <div className={styles.triBox}>

@@ -158,7 +158,8 @@ html {
 }
 
 .formLabel {
-  display: none;
+  flex: 1;
+  margin-right: 10px;
 }
 
 .emailInput {
