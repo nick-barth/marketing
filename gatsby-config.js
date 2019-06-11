@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Esports Web Builder`,
-    description: `Kick off your esports team with a sleek website, smashing noobs never looked cleaner.`,
+    description: `Esports webpage builder, site generator, cms, and esports team management platform`,
     author: `nickbarth`,
   },
   plugins: [
