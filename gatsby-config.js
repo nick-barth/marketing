@@ -3,6 +3,7 @@ module.exports = {
     title: `Esports Web Builder`,
     description: `Esports webpage builder, site generator, cms, and esports team management platform`,
     author: `nickbarth`,
+    siteUrl: `https://esportsgenerate.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
