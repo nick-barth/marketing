@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Esports Web Builder`,
+    title: `Burst.gg`,
     description: `Esports webpage builder, site generator, cms, and esports team management platform`,
     author: `nickbarth`,
-    siteUrl: `https://esportsgenerate.com`,
+    siteUrl: `https://burst.gg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
