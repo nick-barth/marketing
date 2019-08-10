@@ -4,6 +4,7 @@ import classnames from "classnames"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Header from "../components/header"
 import styles from "./index.module.scss"
 import Img from "gatsby-image"
 import Chevron from "../icons/chevron.svg"
@@ -37,10 +38,6 @@ const IndexPage = props => {
     setTimeout(() => textInput.focus(), 1000)
   }
 
-  const handleSubmit = () => {
-    console.log("wow")
-  }
-
   return (
     <Layout>
       <SEO title="Home" />
@@ -66,7 +63,12 @@ const IndexPage = props => {
           />
         </div>
         <div className={classnames(styles.nav, styles.raised)}>
-          <div className={styles.logoText}>nextgenerate</div>
+          <div className={styles.logoText}>burst.gg</div>
+          <div className={styles.loginText}>
+            <a className={styles.linkToLogin} href="https://app.burst.gg">
+              Login
+            </a>
+          </div>
         </div>
         <div className={styles.heroContainer}>
           <h1 className={classnames(styles.hero, styles.raised)}>
@@ -79,54 +81,17 @@ const IndexPage = props => {
       </div>
       <div className={styles.emailContainer}>
         <h2 className={styles.emailHeader}>
-          We're still in Beta, we'd love to see your team.
+          We're still in beta, but we're ready for full on signups.
         </h2>
-        <p className={styles.emailSubtext}>
-          Enter your email here and we'll give you a free website (for a little
-          while).
-        </p>
-        <form
-          method="post"
-          action="#"
-          className={styles.emailForm}
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          name="contact"
-        >
-          <label className={styles.hidden} htmlFor="bot-field">
-            Hidden Botfield
-          </label>
-          <input type="hidden" name="bot-field" />
-          <label className={styles.hidden} htmlFor="form-name">
-            {" "}
-            hidden formname{" "}
-          </label>
-          <input type="hidden" name="form-name" value="contact" />
-          <label className={styles.emailInputContainer} htmlFor="email">
-            <input
-              className={styles.emailInput}
-              id="email"
-              name="name"
-              type="text"
-              placeholder="Email"
-              onChange={val => handleChange(val.target.value)}
-              ref={input => {
-                textInput = input
-              }}
-            />
-          </label>
+        <p className={styles.emailSubtext}>Give it a try while it's free!</p>
+        <a href="https://app.burst.gg">
           <button
-            disabled={!canSend}
-            className={classnames(
-              styles.button,
-              canSend && styles.buttonCanSend
-            )}
+            className={classnames(styles.button, styles.buttonCanSend)}
             type="submit"
-            onClick={handleSubmit}
           >
-            Submit
+            Signup
           </button>
-        </form>
+        </a>
       </div>
       <div className={styles.triContainer}>
         <div className={styles.triBox}>

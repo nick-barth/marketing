@@ -27,6 +27,17 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
+      <div style={{ margin: 0 }}>
+        <a
+          href="app.burst.gg"
+          style={{
+            color: `white`,
+            fontSize: "12px",
+          }}
+        >
+          Login
+        </a>
+      </div>
     </div>
   </header>
 )

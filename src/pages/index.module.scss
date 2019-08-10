@@ -47,14 +47,26 @@ html {
   z-index: -1;
 }
 
+.linkToLogin {
+  color: white;
+  text-decoration: none;
+}
+
 .nav {
   text-align: left;
   padding: 1rem;
   margin-bottom: 1.7rem;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logoText {
+  font-size: 16px;
+}
+
+.loginText {
   font-size: 14px;
+  font-weight: 200;
 }
 
 .heroContainer {
