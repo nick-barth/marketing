@@ -14,20 +14,7 @@ import Simple from "../icons/simple.svg"
 import "./reset.scss"
 
 const IndexPage = props => {
-  const [emailAddress, setEmailAddress] = useState("")
-  const [canSend, setCanSend] = useState(false)
-
   let textInput = null
-
-  function handleClick() {
-    textInput.focus()
-  }
-
-  const handleChange = value => {
-    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    setCanSend(re.test(String(value).toLowerCase()) ? true : false)
-    setEmailAddress(value)
-  }
 
   if (typeof window !== undefined) {
     require("react-scroll")
@@ -83,7 +70,7 @@ const IndexPage = props => {
         <h2 className={styles.emailHeader}>
           We're still in beta, but we're ready for full on signups.
         </h2>
-        <p className={styles.emailSubtext}>Give it a try while it's free!</p>
+        <p className={styles.emailSubtext}>Check out a preview of your site!</p>
         <a href="https://app.burst.gg">
           <button
             className={classnames(styles.button, styles.buttonCanSend)}
