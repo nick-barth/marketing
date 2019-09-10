@@ -61,6 +61,8 @@ td {
   border: 0;
   outline: 0;
   vertical-align: baseline;
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700&display=swap");
+  font-family: "Roboto Slab", serif;
 }
 
 * {
@@ -74,6 +76,10 @@ body {
   line-height: 1;
   color: black;
   background: white;
+  max-width: 1080px;
+  margin: 0 auto !important;
+  float: none !important;
+  overflow: hidden;
 }
 ol,
 ul {

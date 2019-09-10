@@ -1,41 +1,77 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Button from "./button"
 
 const Header = ({ siteTitle }) => (
   <header
     style={{
-      background: `rebeccapurple`,
       marginBottom: `1.45rem`,
     }}
   >
     <div
       style={{
         margin: `0 auto`,
-        maxWidth: 960,
+        maxWidth: 1200,
         padding: `1.45rem 1.0875rem`,
+        display: "flex",
+        justifyContent: "space-between",
       }}
     >
       <h1 style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
-            color: `white`,
+            color: `black`,
             textDecoration: `none`,
+            fontSize: "15px",
           }}
         >
-          {siteTitle}
+          Burst.gg
         </Link>
       </h1>
       <div style={{ margin: 0 }}>
+        <Link
+          to="/"
+          style={{
+            color: `black`,
+            textDecoration: `none`,
+            fontSize: "15px",
+            marginRight: "20px",
+          }}
+        >
+          Solutions
+        </Link>
+        <Link
+          to="/"
+          style={{
+            color: `black`,
+            textDecoration: `none`,
+            fontSize: "15px",
+            marginRight: "20px",
+          }}
+        >
+          Pricing
+        </Link>
+        <Link
+          to="/"
+          style={{
+            color: `black`,
+            textDecoration: `none`,
+            fontSize: "15px",
+            marginRight: "20px",
+          }}
+        >
+          Contact
+        </Link>
         <a
           href="app.burst.gg"
           style={{
-            color: `white`,
+            color: `black`,
             fontSize: "12px",
           }}
         >
-          Login
+          <Button>Login</Button>
         </a>
       </div>
     </div>
