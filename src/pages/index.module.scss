@@ -1,5 +1,4 @@
 .content {
-  max-width: 900px;
   margin: auto;
 }
 .header {
@@ -7,13 +6,13 @@
 }
 
 .hero {
-  height: 100vh;
 }
 
 .heroTitle {
   font-size: 54px;
   max-width: 600px;
   margin-bottom: 40px;
+  font-weight: 700;
 }
 
 .heroSubTitle {
@@ -23,4 +22,28 @@
 }
 
 .wave {
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+
+.wave2 {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  z-index: -1;
+}
+
+.waveContainer {
+  display: block;
+  height: 600px;
+  width: 100px;
+}
+
+.solutions {
+  background-color: #532b74;
+  height: 800px;
+  position: absolute;
+  width: 100%;
+  left: 0;
 }
