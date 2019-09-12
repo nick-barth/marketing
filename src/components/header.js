@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Button from "./button"
+import Logo from "../images/logo.svg"
 
 const Header = ({ siteTitle }) => (
   <header
@@ -16,6 +17,7 @@ const Header = ({ siteTitle }) => (
         padding: `1.45rem 0`,
         display: "flex",
         justifyContent: "space-between",
+        alignItems: "center",
       }}
     >
       <h1 style={{ margin: 0 }}>
@@ -27,7 +29,7 @@ const Header = ({ siteTitle }) => (
             fontSize: "15px",
           }}
         >
-          Burst.gg
+          <img src={Logo} />
         </Link>
       </h1>
       <div style={{ margin: 0 }}>

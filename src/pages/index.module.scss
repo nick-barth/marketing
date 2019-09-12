@@ -1,3 +1,10 @@
+/* RGB */
+$color1: #532b74;
+$color2: rgba(236, 164, 0, 1);
+$color3: rgba(234, 248, 191, 1);
+$color4: rgba(0, 105, 146, 1);
+$color5: rgba(0, 29, 74, 1);
+
 .content {
   margin: auto;
 }
@@ -6,6 +13,7 @@
 }
 
 .hero {
+  margin-bottom: 80px;
 }
 
 .heroTitle {
@@ -13,6 +21,7 @@
   max-width: 600px;
   margin-bottom: 40px;
   font-weight: 700;
+  padding-top: 80px;
 }
 
 .heroSubTitle {
@@ -21,29 +30,12 @@
   margin-bottom: 40px;
 }
 
-.wave {
-  position: absolute;
-  width: 100%;
-  left: 0;
-}
-
-.wave2 {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  z-index: -1;
-}
-
-.waveContainer {
-  display: block;
-  height: 600px;
-  width: 100px;
-}
-
 .solutions {
-  background-color: #532b74;
-  height: 800px;
-  position: absolute;
-  width: 100%;
-  left: 0;
+}
+
+.triboxHolder {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 100px auto;
 }

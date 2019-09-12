@@ -6,8 +6,11 @@ import Layout from "../components/layout"
 import Header from "../components/header"
 import SEO from "../components/seo"
 import Button from "../components/button"
+import Tribox from "../components/Tribox"
 import styles from "./index.module.scss"
-import Img from "gatsby-image"
+import mapImg from "../images/tri_map.svg"
+import crownImg from "../images/tri_crown.svg"
+import magnetImg from "../images/tri_magnet.svg"
 import "./reset.scss"
 
 const IndexPage = props => {
@@ -34,32 +37,30 @@ const IndexPage = props => {
           Everything gamers and streamers need to get out there.
         </p>
         <Button>Sign Up</Button>
-        <div className={styles.waveContainer}>
-          <svg
-            className={styles.wave}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-            fillOpacity="1"
-          >
-            <path
-              fill="#532b74"
-              d="M0,128L80,154.7C160,181,320,235,480,218.7C640,203,800,117,960,90.7C1120,64,1280,96,1360,112L1440,128L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
-            />
-          </svg>
-          <svg
-            className={styles.wave2}
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 1440 320"
-          >
-            <path
-              fill="#a2d9ff"
-              fillOpacity="1"
-              d="M0,192L40,170.7C80,149,160,107,240,117.3C320,128,400,192,480,186.7C560,181,640,107,720,112C800,117,880,203,960,229.3C1040,256,1120,224,1200,213.3C1280,203,1360,213,1400,218.7L1440,224L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"
-            />
-          </svg>
+      </div>
+      <div className={styles.solutionsSection}>
+        <div className={styles.triboxHolder}>
+          <Tribox
+            subtitle="state of the art"
+            title="Get a site"
+            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            image={mapImg}
+          />
+          <Tribox
+            subtitle="ezpz"
+            title="Get noticed"
+            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            image={magnetImg}
+          />
+          <Tribox
+            subtitle="frag"
+            title="Get playing"
+            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            image={crownImg}
+          />
         </div>
       </div>
-      <div className={styles.solutions} />
+      <div>MORE CONTENT</div>
     </Layout>
   )
 }
