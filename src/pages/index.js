@@ -16,7 +16,6 @@ import dbkImg from "../images/dbk.svg"
 import permaImg from "../images/permastunned.svg"
 import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
 import rhsImg from "../images/rhs.svg"
-import brushImg from "../images/brush.png"
 import "./reset.scss"
 
 const IndexPage = props => {
