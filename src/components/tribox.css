@@ -39,7 +39,7 @@
   width: 252px;
   height: 56px;
   transform: skew(20deg);
-  background: #eca400;
+  background: rgba(236, 164, 0, 1);
   position: absolute;
   left: -17px;
 }

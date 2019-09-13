@@ -29,7 +29,7 @@ const Header = ({ siteTitle }) => (
             fontSize: "15px",
           }}
         >
-          <img src={Logo} />
+          <img style={{ height: "70px" }} src={Logo} />
         </Link>
       </h1>
       <div style={{ margin: 0 }}>

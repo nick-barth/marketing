@@ -11,6 +11,7 @@ import styles from "./index.module.scss"
 import mapImg from "../images/tri_map.svg"
 import crownImg from "../images/tri_crown.svg"
 import magnetImg from "../images/tri_magnet.svg"
+import Pricing from "../components/pricing"
 import "./reset.scss"
 
 const IndexPage = props => {
@@ -39,6 +40,7 @@ const IndexPage = props => {
         <Button>Sign Up</Button>
       </div>
       <div className={styles.solutionsSection}>
+        <h3 className={styles.solutionsHeader}>Solutions</h3>
         <div className={styles.triboxHolder}>
           <Tribox
             subtitle="state of the art"
@@ -60,7 +62,7 @@ const IndexPage = props => {
           />
         </div>
       </div>
-      <div>MORE CONTENT</div>
+      <Pricing />
     </Layout>
   )
 }

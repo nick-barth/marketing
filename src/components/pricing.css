@@ -1,0 +1,112 @@
+.pricing {
+  padding: 100px;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.pricing-header {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.pricingBox {
+  background: rgba(0, 105, 146, 1);
+  color: white;
+  border-radius: 5px;
+  width: 300px;
+  text-align: center;
+}
+
+.pricingBox--gold {
+  background: rgba(236, 164, 0, 1);
+}
+
+.pricingBox--purple {
+  background: #532b74;
+}
+
+.pricingTitle {
+  font-size: 36px;
+  font-weight: 700;
+  padding-bottom: 3px;
+  position: relative;
+  padding-top: 30px;
+}
+
+.pricingSubtitle {
+  font-size: 18px;
+  font-weight: 100;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.pricingPrice {
+  color: #333333;
+  font-size: 33px;
+  font-weight: 200;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  position: relative;
+  text-align: center;
+  align-items: baseline;
+  position: relative;
+  background-color: white;
+  border-radius: 100%;
+  height: 90px;
+  width: 90px;
+  margin: auto;
+}
+
+.pricingPriceContent {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.billingPeriod {
+  font-size: 14px;
+  font-weight: 100;
+  padding-top: 5px;
+  padding-bottom: 20px;
+}
+
+.pricingPricecontainer {
+  position: relative;
+}
+
+.pricingCents {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.pricingPriceContent--contact {
+  font-size: 20px;
+}
+
+.pricingFeatures {
+  background-color: white;
+  padding: 20px;
+}
+
+.featuresList {
+  color: #333333;
+}
+
+.feature {
+  font-size: 14px;
+  margin: 15px 0;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+  font-weight: 200;
+}
+
+.featuresList .feature:last-child {
+  border-bottom: none;
+}
