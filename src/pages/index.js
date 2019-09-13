@@ -12,6 +12,10 @@ import mapImg from "../images/tri_map.svg"
 import crownImg from "../images/tri_crown.svg"
 import magnetImg from "../images/tri_magnet.svg"
 import Pricing from "../components/pricing"
+import dbkImg from "../images/dbk.svg"
+import permaImg from "../images/permastunned.svg"
+import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
+import rhsImg from "../images/rhs.svg"
 import "./reset.scss"
 
 const IndexPage = props => {
@@ -26,6 +30,13 @@ const IndexPage = props => {
     setTimeout(() => textInput.focus(), 1000)
   }
 
+  const teams = [
+    { image: dbkImg, alt: "dbkImage" },
+    { image: aberdeeneaglesImg, alt: "abderdeen eagles" },
+    { image: rhsImg, alt: "rhs image" },
+    { image: permaImg, alt: "perma stunned gaming" },
+  ]
+
   return (
     <Layout>
       <SEO title="Home" />
@@ -38,6 +49,18 @@ const IndexPage = props => {
           Everything gamers and streamers need to get out there.
         </p>
         <Button>Sign Up</Button>
+      </div>
+      <div className={styles.trustedSection}>
+        <h3 className={styles.trustedTitle}>
+          Trusted by over 100 players, and 20 organisations, across 11 countries
+        </h3>
+        <div className={styles.trustedImageContainer}>
+          {teams.map(t => {
+            return (
+              <img className={styles.trustedImage} alt={t.alt} src={t.image} />
+            )
+          })}
+        </div>
       </div>
       <div className={styles.solutionsSection}>
         <h3 className={styles.solutionsHeader}>Solutions</h3>
