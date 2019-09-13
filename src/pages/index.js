@@ -16,6 +16,7 @@ import dbkImg from "../images/dbk.svg"
 import permaImg from "../images/permastunned.svg"
 import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
 import rhsImg from "../images/rhs.svg"
+import brushImg from "../images/brush.png"
 import "./reset.scss"
 
 const IndexPage = props => {
@@ -44,6 +45,7 @@ const IndexPage = props => {
       <div className={styles.hero}>
         <h2 className={styles.heroTitle}>
           The fast and visual way to get discovered.
+          <div className={styles.brush} />
         </h2>
         <p className={styles.heroSubTitle}>
           Everything gamers and streamers need to get out there.
@@ -68,19 +70,19 @@ const IndexPage = props => {
           <Tribox
             subtitle="state of the art"
             title="Get a site"
-            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            text="SEO driven.  Responsive.  Performant.  Ready for loads of users.  Beautiful.  Efficient.  Custimizable.  We are looking to build a proffessional facing product for you to use as your homebase.  You will track your users and monitor your progress with our analytics."
             image={mapImg}
           />
           <Tribox
             subtitle="ezpz"
             title="Get noticed"
-            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            text="Streamers, gamers, organisations, our goal is to get you noticed.  We are looking to proffesionalise your brand, make you stand out to sponsors, your audience, and the gaming scene.  Our clients tend to be proffessional focused and driven content creaters in esports.  Just like us."
             image={magnetImg}
           />
           <Tribox
             subtitle="frag"
-            title="Get playing"
-            text="Our services revolve around getting you out there.  We're attempting to cut out the luck and chance from gaming culture, we want to create a more stable infrastructure that rewards consistency and hardwork."
+            title="Get big"
+            text="Our goal is bridge the gap between a pug star, and a super star.  We want to stabilize the journey from highly skilled amatuer to proffessional.  Our agents are all experienced gamers and industry proffesionals, who are looking to pass on knowledge and skills to the next generation of players.  "
             image={crownImg}
           />
         </div>

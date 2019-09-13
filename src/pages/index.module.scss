@@ -17,12 +17,23 @@ $color5: rgba(0, 29, 74, 1);
   min-height: 535px;
 }
 
+.brush {
+  background-color: rgba(236, 164, 0, 0.4);
+  height: 26px;
+  position: absolute;
+  width: 82%;
+  right: 0;
+  bottom: -3px;
+  z-index: -1;
+}
+
 .heroTitle {
   font-size: 54px;
   max-width: 600px;
   margin-bottom: 40px;
   font-weight: 700;
   padding-top: 150px;
+  position: relative;
 }
 
 .heroSubTitle {
