@@ -14,6 +14,7 @@ import Pricing from "../components/pricing"
 import dbkImg from "../images/dbk.svg"
 import permaImg from "../images/permastunned.svg"
 import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
+import BurstLogoWhite from "../images/burst-logo-white.svg"
 import rhsImg from "../images/rhs.svg"
 import "./reset.scss"
 
@@ -93,7 +94,7 @@ const IndexPage = props => {
         </div>
         <Pricing />
       </Layout>
-      <div className={styles.footer}>
+      <section className={styles.footer}>
         <div className={styles.waveContainer}>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path
@@ -111,9 +112,20 @@ const IndexPage = props => {
               d="M0,160L34.3,144C68.6,128,137,96,206,101.3C274.3,107,343,149,411,154.7C480,160,549,128,617,106.7C685.7,85,754,75,823,90.7C891.4,107,960,149,1029,176C1097.1,203,1166,213,1234,208C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
             />
           </svg>
-          <div className={styles.footerContent}>Burst</div>
+          <div className={styles.footerContent}>
+            <img
+              src={BurstLogoWhite}
+              className={styles.footerLogo}
+              alt="burst.gg"
+            ></img>
+            <div className={styles.footerNav}>
+              <div className={styles.footerNavItem}>Privacy</div>
+              <div className={styles.footerNavItem}>Terms of Service</div>
+              <div className={styles.footerNavItem}>Contact</div>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

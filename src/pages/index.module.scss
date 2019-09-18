@@ -66,11 +66,22 @@ $color5: rgba(0, 29, 74, 1);
   height: 400px;
   background-color: #532b74;
   margin-top: -20px;
+  text-align: center;
 }
 
 .waveContainer {
   position: absolute;
   width: 100%;
+}
+
+.footerLogo {
+  width: 250px;
+}
+.footerNav {
+  display: flex;
+  max-width: 300px;
+  margin: auto;
+  justify-content: space-between;
 }
 
 .trustedSection {
