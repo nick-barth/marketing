@@ -42,7 +42,7 @@ const IndexPage = props => {
       <Header />
       <Layout>
         <SEO title="Home" />
-        <div className={styles.hero}>
+        <section className={styles.hero}>
           <h2 className={styles.heroTitle}>
             The fast and visual way to get discovered.
             <div data-aos="fade-in" className={styles.brush} />
@@ -51,8 +51,8 @@ const IndexPage = props => {
             Everything gamers and streamers need to get out there.
           </p>
           <Button>Sign Up</Button>
-        </div>
-        <div className={styles.trustedSection}>
+        </section>
+        <section className={styles.trustedSection}>
           <h3 className={styles.trustedTitle}>
             Trusted by over 100 players, and 20 organisations, across 11
             countries
@@ -68,8 +68,8 @@ const IndexPage = props => {
               )
             })}
           </div>
-        </div>
-        <div className={styles.solutionsSection}>
+        </section>
+        <section className={styles.solutionsSection}>
           <h3 className={styles.solutionsHeader}>Solutions</h3>
           <div className={styles.triboxHolder}>
             <Tribox
@@ -91,7 +91,7 @@ const IndexPage = props => {
               image={crownImg}
             />
           </div>
-        </div>
+        </section>
         <Pricing />
       </Layout>
       <section className={styles.footer}>
