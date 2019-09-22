@@ -19,7 +19,7 @@ const Header = ({ siteTitle }) => {
               fontSize: "15px",
             }}
           >
-            <img style={{ height: "45px" }} src={Logo} />
+            <img alt="burst.gg" style={{ height: "45px" }} src={Logo} />
           </Link>
         </h1>
         <div style={{ margin: 0 }}>
