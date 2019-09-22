@@ -3,9 +3,9 @@
   border-radius: 5px;
   position: relative;
   height: 100%;
-  margin-left: 10px;
-  margin-right: 10px;
   z-index: 2;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .tribox__image-src {
@@ -32,11 +32,14 @@
 
 .tribox__text {
   line-height: 30px;
+  max-width: 85%;
+  text-align: center;
+  padding-top: 20px;
 }
 
 .tribox__parro {
+  width: 212px;
   z-index: -1;
-  width: 252px;
   height: 56px;
   transform: skew(20deg);
   background: rgba(236, 164, 0, 1);

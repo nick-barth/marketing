@@ -75,19 +75,19 @@ const IndexPage = props => {
             <Tribox
               subtitle="state of the art"
               title="Get a site"
-              text="SEO driven.  Responsive.  Performant.  Ready for loads of users.  Beautiful.  Efficient.  Custimizable.  We are looking to build a proffessional facing product for you to use as your homebase.  You will track your users and monitor your progress with our analytics."
+              text="SEO driven. Responsive. Performant. Ready for mass users. Beautiful. Efficient. Customizable. We are looking to build a professional facing product for you to use as your homebase. You will track your users and monitor your progress with our analytics. "
               image={mapImg}
             />
             <Tribox
               subtitle="ezpz"
               title="Get noticed"
-              text="Streamers, gamers, organisations, our goal is to get you noticed.  We are looking to proffesionalise your brand, make you stand out to sponsors, your audience, and the gaming scene.  Our clients tend to be proffessional focused and driven content creaters in esports.  Just like us."
+              text="Streamers, gamers, organizations, our goal is to give you the tools to get noticed. We are looking to professionalize your brand, make you stand out to sponsors, your audience, and the gaming scene. Our clients tend to be professional focused and driven content creators in esports. Just like us."
               image={magnetImg}
             />
             <Tribox
               subtitle="frag"
               title="Get big"
-              text="Our goal is bridge the gap between a pug star, and a super star.  We want to stabilize the journey from highly skilled amatuer to proffessional.  Our agents are all experienced gamers and industry proffesionals, who are looking to pass on knowledge and skills to the next generation of players.  "
+              text="Our goal is to bridge the gap between a pug star, and a super star. We want to stabilize the journey from highly skilled amateur to professional. Our agents are all experienced games and industry professionals who are looking to pass on knowledge and skills to the next generation of players."
               image={crownImg}
             />
           </div>
