@@ -23,41 +23,22 @@ const Header = ({ siteTitle }) => {
           </Link>
         </h1>
         <div style={{ margin: 0 }}>
-          <Link
-            to="/#solutions"
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: "15px",
-              marginRight: "20px",
-            }}
-          >
+          <Link to="/#solutions" className="header-link">
             Solutions
           </Link>
-          <Link
-            to="/#pricing"
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: "15px",
-              marginRight: "20px",
-            }}
-          >
+          <Link to="/#pricing" className="header-link">
             Pricing
           </Link>
           <Link
-            style={{
-              color: `black`,
-              textDecoration: `none`,
-              fontSize: "15px",
-              marginRight: "20px",
-            }}
+            className="header-link"
             onClick={() => window.$crisp.push(["do", "chat:open"])}
           >
             Contact
           </Link>
           <a
             href="app.burst.gg"
+            className="header-button"
+            header-button
             style={{
               color: `black`,
               fontSize: "12px",

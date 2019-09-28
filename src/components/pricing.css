@@ -118,3 +118,14 @@
 .featuresList .feature:last-child {
   border-bottom: none;
 }
+
+@media (max-width: 1200px) {
+  .pricing {
+    flex-direction: column;
+    padding: 50px;
+    align-items: center;
+  }
+  .pricingBox {
+    margin-bottom: 40px;
+  }
+}

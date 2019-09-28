@@ -8,6 +8,12 @@
   margin-right: 15px;
 }
 
+@media (max-width: 1200px) {
+  .tribox__text {
+    margin-bottom: 50px;
+  }
+}
+
 .tribox__image-src {
   height: 80px;
   width: 80px;
@@ -36,6 +42,12 @@
   padding-top: 20px;
 }
 
+@media (max-width: 1200px) {
+  .tribox__text {
+    max-width: 100%;
+  }
+}
+
 .tribox__parro {
   width: 212px;
   z-index: -1;
@@ -44,6 +56,19 @@
   background: #532b74;
   position: absolute;
   left: -17px;
+}
+
+@media (max-width: 1200px) {
+  .tribox__parro {
+    width: 200px;
+    z-index: -1;
+    height: 56px;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    background: #532b74;
+    position: absolute;
+    left: -4px;
+  }
 }
 
 .tribox__parro--gold {

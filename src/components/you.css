@@ -68,3 +68,16 @@
 .you-box--blue {
   background-color: rgba(0, 105, 146, 1);
 }
+
+@media (max-width: 1200px) {
+  .you-content {
+    flex-direction: column;
+  }
+  .you-content {
+    margin-bottom: 50px;
+  }
+  .you-box {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}

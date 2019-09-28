@@ -18,6 +18,11 @@ $blue: rgba(0, 105, 146, 1);
   margin-top: 75px;
   padding-top: 100px;
   padding-bottom: 100px;
+  @media (max-width: 1200px) {
+    margin-top: 0;
+    padding-top: 0;
+    padding: 10px;
+  }
 }
 
 .brush {
@@ -28,6 +33,9 @@ $blue: rgba(0, 105, 146, 1);
   right: 0;
   bottom: -3px;
   z-index: -1;
+  @media (max-width: 1200px) {
+    right: 20px;
+  }
 }
 
 .heroTitle {
@@ -56,6 +64,7 @@ $blue: rgba(0, 105, 146, 1);
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
+  flex-direction: column;
 }
 
 .footer {
@@ -69,6 +78,9 @@ $blue: rgba(0, 105, 146, 1);
   background-color: #532b74;
   margin-top: -20px;
   text-align: center;
+  @media (max-width: 1200px) {
+    height: 300px;
+  }
 }
 
 .waveContainer {
@@ -99,6 +111,9 @@ $blue: rgba(0, 105, 146, 1);
   justify-content: space-between;
   margin: 50px auto;
   max-width: 600px;
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
 }
 
 .trustedImage {
@@ -106,6 +121,10 @@ $blue: rgba(0, 105, 146, 1);
   height: 100px;
   filter: grayscale(100%);
   transition: all 0.4s ease-in-out;
+  @media (max-width: 1200px) {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .trustedImage:hover {
