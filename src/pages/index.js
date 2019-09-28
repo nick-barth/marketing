@@ -45,8 +45,6 @@ const IndexPage = props => {
             The fast and visual way to get discovered.
             <div data-aos="fade-in" className={styles.brush} />
           </h2>
-          <p className={styles.heroSubTitle}>
-            Everything gamers and streamers need to get out there.
           </p>
           <Button>Sign Up</Button>
         </section>
