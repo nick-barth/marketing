@@ -1,0 +1,80 @@
+.tribox {
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+  height: 100%;
+  z-index: 2;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+@media (max-width: 1200px) {
+  .tribox__text {
+    margin-bottom: 50px;
+  }
+}
+
+.tribox__image-src {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  right: 35px;
+  top: -10px;
+}
+
+.tribox__subtitle {
+  font-size: 14px;
+  margin-bottom: 20px;
+  font-weight: 100;
+  color: white;
+}
+
+.tribox__title {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 800;
+  color: white;
+}
+
+.tribox__text {
+  line-height: 30px;
+  max-width: 85%;
+  padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .tribox__text {
+    max-width: 100%;
+  }
+}
+
+.tribox__parro {
+  width: 212px;
+  z-index: -1;
+  height: 56px;
+  transform: skew(20deg);
+  background: #532b74;
+  position: absolute;
+  left: -17px;
+}
+
+@media (max-width: 1200px) {
+  .tribox__parro {
+    width: 200px;
+    z-index: -1;
+    height: 56px;
+    -webkit-transform: skew(20deg);
+    transform: skew(20deg);
+    background: #532b74;
+    position: absolute;
+    left: -4px;
+  }
+}
+
+.tribox__parro--gold {
+  background-color: rgba(236, 164, 0, 1);
+}
+
+.tribox__parro--blue {
+  background-color: rgba(0, 105, 146, 1);
+}

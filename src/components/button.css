@@ -1,0 +1,20 @@
+.button {
+  color: white;
+  background-color: #532b74;
+  outline: 0;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.button--yellow {
+  background-color: rgba(236, 164, 0, 1);
+}
+
+.button--blue {
+  background-color: rgba(0, 105, 146, 1);
+}

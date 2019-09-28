@@ -1,420 +1,132 @@
-$tablet-width: 490px;
-$desktop-width: 768px;
+/* RGB */
+$purple: #532b74;
+$gold: rgba(236, 164, 0, 1);
+$blue: rgba(0, 105, 146, 1);
 
-@mixin tablet {
-  @media (min-width: #{$tablet-width - 1px}) {
-    @content;
-  }
-}
-
-@mixin desktop {
-  @media (min-width: #{$desktop-width}) {
-    @content;
-  }
-}
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap");
-
-html {
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  @include tablet {
-    font-size: 18px;
-  }
+.content {
+  margin: auto;
+  max-width: 1200px;
 }
 
 .header {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  color: white;
-  font-size: 1.4rem;
-  font-weight: 700;
-  text-align: center;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.header:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(136.94deg, #cc52ee, #56a2f7 76.57%, #32bafa);
-  z-index: -1;
-}
-
-.linkToLogin {
-  color: white;
-  text-decoration: none;
-}
-
-.nav {
-  text-align: left;
-  padding: 1rem;
-  margin-bottom: 1.7rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logoText {
-  font-size: 16px;
-}
-
-.loginText {
-  font-size: 14px;
-  font-weight: 200;
-}
-
-.heroContainer {
-  padding: 0 10px;
-  z-index: 3;
-  margin-bottom: 150px;
-  @include tablet {
-    padding: 50px;
-  }
+  height: 80px;
 }
 
 .hero {
-  font-size: 2.3rem;
-  font-weight: 700;
-  margin-bottom: 1.7rem;
+  margin-bottom: 80px;
+  min-height: 535px;
+  margin-top: 75px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media (max-width: 1200px) {
+    margin-top: 0;
+    padding-top: 0;
+    padding: 10px;
+  }
 }
 
-.subhero {
-  font-weight: 300;
-  font-size: 1.7rem;
-}
-
-.dancer {
-  z-index: 0;
-  width: 200px;
-  height: 200px;
-}
-
-.dancer:nth-child(1) {
-  top: 54%;
-  left: 15%;
-}
-
-.dancer:nth-child(2) {
-  top: 30%;
-  left: 80%;
-}
-
-.dancer:nth-child(3) {
-  top: 15%;
-  left: 15%;
-}
-
-.emailContainer {
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 13px 6px 24px 0 rgba(0, 0, 0, 0.13);
-  padding: 1.7rem;
-  display: flex;
-  margin-top: -105px;
-  z-index: 5;
-  flex-direction: column;
-  text-align: center;
+.brush {
+  background-color: rgba(236, 164, 0, 0.4);
+  height: 26px;
   position: absolute;
-  width: 90%;
-  max-width: 700px;
-  left: 50%;
-  transform: translateX(-50%);
-  @include tablet {
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 40px;
-  }
-
-  @include desktop {
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 60px;
-    margin-top: -130px;
-  }
-}
-
-.emailHeader {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 1.7rem;
-}
-
-.emailSubtext {
-  font-weight: 100;
-  font-size: 1rem;
-  margin-bottom: 1.7rem;
-}
-
-.emailInputContainer {
-  position: relative;
-  margin-bottom: 20px;
-  @include tablet {
-    flex-grow: 1;
-    margin-right: 25px;
-    margin-bottom: 0;
-  }
-}
-
-.emailForm {
-  display: flex;
-  flex-direction: column;
-  @include tablet {
-    flex-direction: row;
-  }
-}
-
-.hidden {
-  display: none;
-}
-
-.formLabel {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.emailInput {
-  padding: 0.8rem;
-  text-align: center;
-  width: 100%;
-  background: #efefef;
-  border: 0;
-  font-size: 1rem;
-  border-radius: 8px;
-  outline: 0;
-  transition: all 0.45s ease-in-out;
-  position: relative;
-  display: block;
-  border: none;
-  background: #f0f0f0;
-}
-
-.emailInputContainer::after {
-  content: "";
-  position: absolute;
-  border-radius: 8px;
-  top: 0;
-  left: 0;
+  width: 82%;
+  right: 0;
+  bottom: -3px;
   z-index: -1;
-  width: 100%;
-  height: 100%;
-  box-shadow: 0px 0px 0px 0px;
-  color: rgba(153, 123, 234, 0.6);
-}
-
-.emailInput:focus-within {
-  box-shadow: 0px 0px 0px 2px rgb(153, 123, 234);
-}
-
-.emailInputContainer:focus-within {
-  pointer-events: none;
-}
-
-.emailInputContainer:focus-within.emailInputContainer::after {
-  animation: anim-shadow 0.75s forwards;
-}
-
-@-webkit-keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 75px 25px;
-    opacity: 0;
+  @media (max-width: 1200px) {
+    right: 20px;
   }
 }
 
-@keyframes anim-shadow {
-  to {
-    box-shadow: 0px 0px 75px 25px;
-    opacity: 0;
-  }
-}
-
-.button {
-  border: none;
-  color: #aeaeae;
-  border-radius: 8px;
-  padding: 0.8rem;
-  font-size: 1rem;
-  background-color: #f0f0f0;
-  cursor: not-allowed;
-  min-width: 120px;
-  transition: all 0.35s ease-in-out;
-}
-
-.buttonCanSend {
-  color: white;
-  cursor: pointer;
-  background-color: rgb(98, 167, 238);
-}
-
-.triContainer {
-  display: flex;
-  margin-top: 17rem;
-  flex-direction: column;
-  @include desktop {
-    flex-direction: row;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.triBox {
-  background-color: rgb(96, 201, 248);
-  box-shadow: 13px 6px 24px 0 rgba(0, 0, 0, 0.13);
-  border-radius: 8px;
-  width: 85%;
-  margin: auto;
-  cursor: pointer;
-  margin-bottom: 4rem;
-  padding: 2rem;
-  color: white;
+.heroTitle {
+  font-size: 54px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  font-weight: 700;
+  padding-top: 150px;
   position: relative;
-  transition: all 0.35s ease-in-out;
-  &:hover {
-    box-shadow: 13px 6px 24px 0 rgba(0, 0, 0, 0.43);
-  }
-  @include desktop {
-    margin: 0 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
 }
 
-.triBoxHeader {
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  font-size: 1.7rem;
-  max-width: 10rem;
+.heroSubTitle {
+  font-size: 32px;
+  max-width: 600px;
+  margin-bottom: 40px;
 }
 
-.triBoxContent {
-  margin-bottom: 2rem;
-}
-
-.triBoxIcon {
-  position: absolute;
-  overflow: hidden;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  top: -15px;
-  right: 25px;
-  animation: spin 5s linear infinite;
-}
-
-.triBoxIcon3 {
-  animation-delay: 1s;
-}
-
-.triBoxIcon3 {
-  animation-delay: 2s;
-}
-
-.triBoxButton {
-  border: none;
-  color: white;
-  background-color: rgb(153, 123, 234);
-  display: flex;
-  align-items: center;
-  border-radius: 8px;
-  padding: 1rem;
-  font-size: 1rem;
-  transition: all 0.35s ease-in-out;
-  margin-left: auto;
-  margin-top: auto;
-  cursor: pointer;
-}
-
-.triBoxButton:hover {
-  background-color: rgb(118, 86, 206);
-}
-
-.icon {
-  font-size: 0.7rem;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.section {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: auto;
-  &.sectionLeft {
-    flex-direction: row-reverse;
-  }
-  @include tablet {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-
-.sectionHeader {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.sectionImage {
-  height: 200px;
-  width: 200px;
-  margin: auto;
-  @include tablet {
-    height: 400px;
-    width: 400px;
-    margin: 0 4rem;
-  }
-}
-
-.cta {
-  padding: 2rem;
-  width: 100%;
-  background-color: rgb(118, 86, 206);
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.solutionsHeader {
+  font-size: 32px;
   text-align: center;
-  @include tablet {
-    padding: 8rem;
+  margin-bottom: 30px;
+}
+
+.triboxHolder {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  flex-direction: column;
+}
+
+.footer {
+  height: 300px;
+  position: relative;
+}
+
+.footerContent {
+  color: white;
+  height: 400px;
+  background-color: #532b74;
+  margin-top: -20px;
+  text-align: center;
+  @media (max-width: 1200px) {
+    height: 300px;
   }
 }
 
-.ctaCta {
-  border: none;
-  color: rgb(118, 86, 206);
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 8px;
-  padding: 0.8rem;
-  font-size: 1rem;
-  min-width: 120px;
-  transition: all 0.35s ease-in-out;
-  cursor: pointer;
-  font-weight: 700;
+.waveContainer {
+  position: absolute;
+  width: 100%;
 }
 
-.ctaCta:hover {
-  color: white;
-  background-color: rgb(118, 86, 206);
+.footerLogo {
+  width: 250px;
+}
+.footerNav {
+  display: flex;
+  max-width: 300px;
+  margin: auto;
+  justify-content: space-between;
 }
 
-.ctaContent {
-  font-weight: 700;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
+.trustedSection {
+  color: #c5c5c5;
+  text-align: center;
+  font-size: 26px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.trustedImageContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto;
+  max-width: 600px;
+  @media (max-width: 1200px) {
+    padding: 0 20px;
+  }
+}
+
+.trustedImage {
+  width: 100px;
+  height: 100px;
+  filter: grayscale(100%);
+  transition: all 0.4s ease-in-out;
+  @media (max-width: 1200px) {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.trustedImage:hover {
+  filter: none;
 }

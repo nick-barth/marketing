@@ -1,225 +1,134 @@
-import React, { useState } from "react"
-import Scroll from "react-scroll"
-import classnames from "classnames"
-
+import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
 import Header from "../components/header"
+import SEO from "../components/seo"
+import Button from "../components/button"
+import Tribox from "../components/tribox"
 import styles from "./index.module.scss"
-import Img from "gatsby-image"
-import Chevron from "../icons/chevron.svg"
-import Efficient from "../icons/efficient.svg"
-import Performant from "../icons/performant.svg"
-import Simple from "../icons/simple.svg"
+import mapImg from "../images/tri_map.svg"
+import crownImg from "../images/tri_crown.svg"
+import magnetImg from "../images/tri_magnet.svg"
+import Pricing from "../components/pricing"
+import You from "../components/you"
+import dbkImg from "../images/dbk.svg"
+import permaImg from "../images/permastunned.svg"
+import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
+import BurstLogoWhite from "../images/burst-logo-white.svg"
+import rhsImg from "../images/rhs.svg"
 import "./reset.scss"
 
 const IndexPage = props => {
   let textInput = null
 
-  if (typeof window !== undefined) {
-    require("react-scroll")
+  if (typeof window !== "undefined") {
+    require("smooth-scroll")('a[href*="#"]', {
+      speed: 500,
+      header: "#header",
+      offset: () => 25,
+    })
   }
 
-  const scrollToTop = () => {
-    Scroll.animateScroll.scrollToTop(250)
-    setTimeout(() => textInput.focus(), 1000)
-  }
+  const teams = [
+    { image: dbkImg, alt: "dbkImage" },
+    { image: aberdeeneaglesImg, alt: "abderdeen eagles" },
+    { image: rhsImg, alt: "rhs image" },
+    { image: permaImg, alt: "perma stunned gaming" },
+  ]
 
   return (
-    <Layout>
-      <SEO title="Home" />
-      <div className={styles.header}>
-        <div className={styles.dancers}>
-          <Img
-            style={{ position: "absolute" }}
-            className={styles.dancer}
-            fixed={props.data.ball_1.childImageSharp.fixed}
-            alt="Balls"
-          />
-          <Img
-            style={{ position: "absolute" }}
-            className={styles.dancer}
-            fixed={props.data.ball_2.childImageSharp.fixed}
-            alt="Balls"
-          />
-          <Img
-            style={{ position: "absolute" }}
-            className={styles.dancer}
-            fixed={props.data.ball_3.childImageSharp.fixed}
-            alt="Balls"
-          />
+    <>
+      <Header />
+      <Layout>
+        <SEO title="Home" />
+        <section className={styles.hero}>
+          <h2 className={styles.heroTitle}>
+            The fast and visual way to get discovered.
+            <div data-aos="fade-in" className={styles.brush} />
+          </h2>
+          </p>
+          <Button>Sign Up</Button>
+        </section>
+        <section className={styles.trustedSection}>
+          <h3 className={styles.trustedTitle}>
+            Trusted by over 100 players, and 20 organisations, across 11
+            countries
+          </h3>
+          <div className={styles.trustedImageContainer}>
+            {teams.map(t => {
+              return (
+                <img
+                  className={styles.trustedImage}
+                  alt={t.alt}
+                  src={t.image}
+                  key={t.alt}
+                />
+              )
+            })}
+          </div>
+        </section>
+        <section id="solutions" className={styles.solutionsSection}>
+          <h3 className={styles.solutionsHeader}>Solutions</h3>
+          <div className={styles.triboxHolder}>
+            <Tribox
+              subtitle="state of the art"
+              title="Get a site"
+              text="SEO driven. Responsive. Performant. Ready for mass users. Beautiful. Efficient. Customizable. We are looking to build a professional facing product for you to use as your homebase. You will track your users and monitor your progress with our analytics. "
+              image={mapImg}
+              color="blue"
+            />
+            <Tribox
+              subtitle="ezpz"
+              title="Get noticed"
+              text="Streamers, gamers, organizations, our goal is to give you the tools to get noticed. We are looking to professionalize your brand, make you stand out to sponsors, your audience, and the gaming scene. Our clients tend to be professional focused and driven content creators in esports. Just like us."
+              image={magnetImg}
+              color="purple"
+            />
+            <Tribox
+              subtitle="frag"
+              title="Get big"
+              text="Our goal is to bridge the gap between a pug star, and a super star. We want to stabilize the journey from highly skilled amateur to professional. Our agents are all experienced games and industry professionals who are looking to pass on knowledge and skills to the next generation of players."
+              image={crownImg}
+              color="gold"
+            />
+          </div>
+        </section>
+        <You />
+        <Pricing />
+      </Layout>
+      <section className={styles.footer}>
+        <div className={styles.waveContainer}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#eca400"
+              fillOpacity="1"
+              d="M0,192L34.3,165.3C68.6,139,137,85,206,106.7C274.3,128,343,224,411,250.7C480,277,549,235,617,192C685.7,149,754,107,823,117.3C891.4,128,960,192,1029,181.3C1097.1,171,1166,85,1234,64C1302.9,43,1371,85,1406,106.7L1440,128L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+            />
+          </svg>
         </div>
-        <div className={classnames(styles.nav, styles.raised)}>
-          <div className={styles.logoText}>burst.gg</div>
-          <div className={styles.loginText}>
-            <a className={styles.linkToLogin} href="https://app.burst.gg">
-              Login
-            </a>
+        <div className={styles.waveContainer}>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path
+              fill="#532b74"
+              fillOpacity="1"
+              d="M0,160L34.3,144C68.6,128,137,96,206,101.3C274.3,107,343,149,411,154.7C480,160,549,128,617,106.7C685.7,85,754,75,823,90.7C891.4,107,960,149,1029,176C1097.1,203,1166,213,1234,208C1302.9,203,1371,181,1406,170.7L1440,160L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z"
+            />
+          </svg>
+          <div className={styles.footerContent}>
+            <img
+              src={BurstLogoWhite}
+              className={styles.footerLogo}
+              alt="burst.gg"
+            ></img>
+            <div className={styles.footerNav}>
+              <div className={styles.footerNavItem}>Privacy</div>
+              <div className={styles.footerNavItem}>Terms of Service</div>
+              <div className={styles.footerNavItem}>Contact</div>
+            </div>
           </div>
         </div>
-        <div className={styles.heroContainer}>
-          <h1 className={classnames(styles.hero, styles.raised)}>
-            Generate a website for your esports team in&nbsp;seconds
-          </h1>
-          <h2 className={classnames(styles.subhero, styles.raised)}>
-            perfect for the start of your esports journey
-          </h2>
-        </div>
-      </div>
-      <div className={styles.emailContainer}>
-        <h2 className={styles.emailHeader}>
-          We're still in beta, but we're ready for full on signups.
-        </h2>
-        <p className={styles.emailSubtext}>Check out a preview of your site!</p>
-        <a href="https://app.burst.gg">
-          <button
-            className={classnames(styles.button, styles.buttonCanSend)}
-            type="submit"
-          >
-            Signup
-          </button>
-        </a>
-      </div>
-      <div className={styles.triContainer}>
-        <div className={styles.triBox}>
-          <Img
-            style={{ position: "absolute" }}
-            className={styles.triBoxIcon}
-            fixed={props.data.ball_4.childImageSharp.fixed}
-            alt="Balls"
-          />
-          <h3 className={styles.triBoxHeader}>Efficient</h3>
-          <p className={styles.triBoxContent}>
-            With our network of generated sites, we are able to run big data
-            user testing to determine the best solution for your site.
-          </p>
-          <button onClick={scrollToTop} className={styles.triBoxButton}>
-            Learn More <Chevron className={styles.icon} />
-          </button>
-        </div>
-        <div className={styles.triBox}>
-          <Img
-            style={{ position: "absolute" }}
-            className={classnames(styles.triBoxIcon, styles.triBoxIcon2)}
-            fixed={props.data.ball_4.childImageSharp.fixed}
-            alt="Balls"
-          />
-          <h3 className={styles.triBoxHeader}>Simple</h3>
-          <p className={styles.triBoxContent}>
-            We are offering you a solution, no guesswork, no DIY, we are
-            crafting an out of box experience that suits exactly your needs
-          </p>
-          <button onClick={scrollToTop} className={styles.triBoxButton}>
-            Learn More <Chevron className={styles.icon} />
-          </button>
-        </div>
-        <div className={styles.triBox}>
-          <Img
-            style={{ position: "absolute" }}
-            className={classnames(styles.triBoxIcon, styles.triBoxIcon3)}
-            fixed={props.data.ball_4.childImageSharp.fixed}
-            alt="Balls"
-          />
-          <h3 className={styles.triBoxHeader}>Performant</h3>
-          <p className={styles.triBoxContent}>
-            By using the latest tech and limiting featuresets we are able to
-            concisely control user experience, SEO, and the preformance of your
-            website.
-          </p>
-          <button onClick={scrollToTop} className={styles.triBoxButton}>
-            Learn More <Chevron className={styles.icon} />
-          </button>
-        </div>
-      </div>
-      <div className={styles.section}>
-        <div className={styles.sectionImageContainer}>
-          <Simple className={styles.sectionImage} />
-        </div>
-        <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeader}>Streamlined</h2>
-          <p className={styles.sectionContent}>
-            Web data suggests users are looking for a functional, fast, and
-            streamlined experience on any website. We are using data and testing
-            to ensure we know what the user is looking for, and we are able to
-            serve them as quickly as possible.
-          </p>
-        </div>
-      </div>
-      <div className={classnames(styles.section, styles.sectionLeft)}>
-        <div className={styles.sectionImageContainer}>
-          <Performant className={styles.sectionImage} />
-        </div>
-        <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeader}>Performance</h2>
-          <p className={styles.sectionContent}>
-            Execution is key. We strive to use the best technology and enforce
-            strict standards on ourselves. So far, it's working. The numbers are
-            clear in this, pageload is the single most important metric for
-            users interactions with your site. We aim to be as quick as
-            possible, to serve you and your users.
-          </p>
-        </div>
-      </div>
-      <div className={styles.section}>
-        <div className={styles.sectionImageContainer}>
-          <Efficient className={styles.sectionImage} />
-        </div>
-        <div className={styles.sectionContent}>
-          <h2 className={styles.sectionHeader}>Data driven</h2>
-          <p className={styles.sectionContent}>
-            We're making decisions for you, those decisions come from our
-            designers, and most importantly our data. We're measuring everything
-            about these websites in order to whittle our way down and hone a
-            perfect site.
-          </p>
-        </div>
-      </div>
-      <div className={styles.cta}>
-        <div className={styles.ctaContent}>
-          Want to see your new site in action?
-        </div>
-        <button onClick={scrollToTop} className={styles.ctaCta}>
-          Start now
-        </button>
-      </div>
-    </Layout>
+      </section>
+    </>
   )
 }
-
-export const query = graphql`
-  query {
-    ball_1: file(relativePath: { eq: "ball_1.png" }) {
-      childImageSharp {
-        fixed(width: 150, height: 150) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-
-    ball_4: file(relativePath: { eq: "ball_1.png" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-
-    ball_2: file(relativePath: { eq: "ball_2.png" }) {
-      childImageSharp {
-        fixed(width: 75, height: 75) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-
-    ball_3: file(relativePath: { eq: "ball_3.png" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 export default IndexPage

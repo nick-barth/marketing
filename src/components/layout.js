@@ -16,9 +16,9 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div className="content" id="top">
         <main>{children}</main>
-      </>
+      </div>
     )}
   />
 )
