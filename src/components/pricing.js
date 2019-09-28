@@ -5,7 +5,9 @@ import "./pricing.css"
 
 const Pricing = () => (
   <>
-    <h3 className="pricing-header">Pricing</h3>
+    <h3 id="pricing" className="pricing-header">
+      Pricing
+    </h3>
     <div style={{ backgroundImage: `url(${Pattern})` }} className="pricing">
       <div className="pricingBox">
         <div className="pricingTitle">Basic</div>

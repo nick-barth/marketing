@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => {
       <div className="header-inner">
         <h1 style={{ margin: 0 }}>
           <Link
-            to="/"
+            to="/#top"
             style={{
               color: `black`,
               textDecoration: `none`,
@@ -24,7 +24,7 @@ const Header = ({ siteTitle }) => {
         </h1>
         <div style={{ margin: 0 }}>
           <Link
-            to="/"
+            to="/#solutions"
             style={{
               color: `black`,
               textDecoration: `none`,
@@ -35,7 +35,7 @@ const Header = ({ siteTitle }) => {
             Solutions
           </Link>
           <Link
-            to="/"
+            to="/#pricing"
             style={{
               color: `black`,
               textDecoration: `none`,
@@ -46,13 +46,13 @@ const Header = ({ siteTitle }) => {
             Pricing
           </Link>
           <Link
-            to="/"
             style={{
               color: `black`,
               textDecoration: `none`,
               fontSize: "15px",
               marginRight: "20px",
             }}
+            onClick={() => window.$crisp.push(["do", "chat:open"])}
           >
             Contact
           </Link>
