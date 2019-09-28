@@ -64,7 +64,9 @@ $blue: rgba(0, 105, 146, 1);
   display: flex;
   justify-content: space-between;
   margin: 50px auto;
-  flex-direction: column;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
 }
 
 .footer {
