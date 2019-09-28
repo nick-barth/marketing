@@ -45,7 +45,6 @@ const IndexPage = props => {
             The fast and visual way to get discovered.
             <div data-aos="fade-in" className={styles.brush} />
           </h2>
-          </p>
           <Button>Sign Up</Button>
         </section>
         <section className={styles.trustedSection}>
