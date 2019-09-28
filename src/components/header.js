@@ -36,13 +36,9 @@ const Header = ({ siteTitle }) => {
             Contact
           </Link>
           <a
-            href="app.burst.gg"
+            href="https://app.burst.gg"
             className="header-button"
             header-button
-            style={{
-              color: `black`,
-              fontSize: "12px",
-            }}
           >
             <Button>Login</Button>
           </a>
