@@ -1,9 +1,9 @@
 import React from "react"
 import "./tribox.css"
 
-const Tribox = ({ title, image, text, subtitle }) => (
+const Tribox = ({ title, image, text, subtitle, color }) => (
   <div className="tribox">
-    <div className="tribox__parro" />
+    <div className={`tribox__parro tribox__parro--${color}`} />
     <div className="tribox__image-bubble">
       <img className="tribox__image-src" src={image} alt={title} />
     </div>

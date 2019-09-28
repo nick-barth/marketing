@@ -11,6 +11,7 @@ import mapImg from "../images/tri_map.svg"
 import crownImg from "../images/tri_crown.svg"
 import magnetImg from "../images/tri_magnet.svg"
 import Pricing from "../components/pricing"
+import You from "../components/you"
 import dbkImg from "../images/dbk.svg"
 import permaImg from "../images/permastunned.svg"
 import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
@@ -77,21 +78,25 @@ const IndexPage = props => {
               title="Get a site"
               text="SEO driven. Responsive. Performant. Ready for mass users. Beautiful. Efficient. Customizable. We are looking to build a professional facing product for you to use as your homebase. You will track your users and monitor your progress with our analytics. "
               image={mapImg}
+              color="blue"
             />
             <Tribox
               subtitle="ezpz"
               title="Get noticed"
               text="Streamers, gamers, organizations, our goal is to give you the tools to get noticed. We are looking to professionalize your brand, make you stand out to sponsors, your audience, and the gaming scene. Our clients tend to be professional focused and driven content creators in esports. Just like us."
               image={magnetImg}
+              color="purple"
             />
             <Tribox
               subtitle="frag"
               title="Get big"
               text="Our goal is to bridge the gap between a pug star, and a super star. We want to stabilize the journey from highly skilled amateur to professional. Our agents are all experienced games and industry professionals who are looking to pass on knowledge and skills to the next generation of players."
               image={crownImg}
+              color="gold"
             />
           </div>
         </section>
+        <You />
         <Pricing />
       </Layout>
       <section className={styles.footer}>
