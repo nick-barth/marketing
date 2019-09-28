@@ -26,7 +26,9 @@ const Pricing = () => (
             <li className="feature">Mess around, figure yourself out</li>
           </ul>
           <div className="pricingSignup">
-            <Button color="blue"> Get Started </Button>
+            <a href="https://app.burst.gg/">
+              <Button color="blue"> Get Started </Button>
+            </a>
           </div>
         </div>
       </div>

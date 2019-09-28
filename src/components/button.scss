@@ -9,12 +9,24 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
+  transition: 0.3s ease-in-out all;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: darken(#532b74, 10%);
 }
 
 .button--yellow {
   background-color: rgba(236, 164, 0, 1);
+  &:hover {
+    background-color: darken(rgba(236, 164, 0, 1), 10%);
+  }
 }
 
 .button--blue {
   background-color: rgba(0, 105, 146, 1);
+  &:hover {
+    background-color: darken(rgba(0, 105, 146, 1), 10%);
+  }
 }
