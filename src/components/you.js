@@ -8,7 +8,7 @@ const You = () => (
     <div className="you-content">
       <div className="you-box you-box--blue">
         <div className="you-text">
-          You are proffessional, legit, good, and serious about esports. Your
+          You are professional, legit, good, and serious about esports. Your
           personalised squad website must reflect that.
         </div>
         <h4 className="you-title">Teams</h4>
