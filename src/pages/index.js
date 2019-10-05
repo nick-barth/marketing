@@ -15,6 +15,7 @@ import permaImg from "../images/permastunned.svg"
 import aberdeeneaglesImg from "../images/aberdeeneagles.svg"
 import BurstLogoWhite from "../images/burst-logo-white.svg"
 import rhsImg from "../images/rhs.svg"
+import GamerImg from "../images/gamer_boy.svg"
 import "./reset.scss"
 
 const IndexPage = props => {
@@ -27,7 +28,6 @@ const IndexPage = props => {
       offset: () => 25,
     })
   }
-
   const teams = [
     { image: dbkImg, alt: "dbkImage" },
     { image: aberdeeneaglesImg, alt: "abderdeen eagles" },
@@ -41,6 +41,9 @@ const IndexPage = props => {
       <Layout>
         <SEO title="Home" />
         <section className={styles.hero}>
+          <div className={styles.heroContainer}>
+            <img src={GamerImg} className={styles.heroSrc} />
+          </div>
           <h2 className={styles.heroTitle}>
             The fast and visual way to get discovered.
             <div data-aos="fade-in" className={styles.brush} />
