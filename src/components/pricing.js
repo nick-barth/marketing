@@ -22,7 +22,7 @@ const Pricing = () => (
         </div>
         <div className="pricingFeatures">
           <ul className="featuresList">
-            <li className="feature">Beatuiful and efficient website</li>
+            <li className="feature">Beautiful and efficient website</li>
             <li className="feature">Mess around, figure yourself out</li>
           </ul>
           <div className="pricingSignup">
@@ -45,7 +45,7 @@ const Pricing = () => (
         </div>
         <div className="pricingFeatures">
           <ul className="featuresList">
-            <li className="feature">Beatuiful and efficient website</li>
+            <li className="feature">Beautiful and efficient website</li>
             <li className="feature">Domain, hosting, design, handled by us</li>
             <li className="feature">Analytics and customisation</li>
             <li className="feature">Search engine optimisation</li>
@@ -68,7 +68,7 @@ const Pricing = () => (
         </div>
         <div className="pricingFeatures">
           <ul className="featuresList">
-            <li className="feature">Beatuiful and efficient website</li>
+            <li className="feature">Beautiful and efficient website</li>
             <li className="feature">Domain, hosting, design, handled by us</li>
             <li className="feature">Analytics and customisation</li>
             <li className="feature">Search engine optimisation</li>
